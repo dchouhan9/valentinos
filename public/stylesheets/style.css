@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; font-family:Calibri, Arial; color:#333; font-size:15px;}
+body{ background-image:url(../pics/bgStripe.png)}
+
+/* Layout Divs */
+#wrapper{ position:relative; top:30px; margin:auto; width:920px; background-image:url(../pics/mainBG.png); border:5px solid #666;}
+#main{ width:100%; overflow:auto;}
+#mainL{ width:220px; position:relative; float:left; text-align:center; padding-left:10px;}
+#mainR{ width:671px; float:right;}
+#mainRL{ width:420px; position:relative; float:left;}
+#mainRR{ width:220px; float:right; border-left:2px dashed #999;}
+#greyBG{ width:75%; background-color:#fff; margin:auto; padding:5px;}
+#sitemap{ clear:both; width:920px; position:relative; text-align:right; margin:auto; top:30px;}
+#footer{ clear:both; position:relative; border:2px dashed #999; padding:5px; background-color:#fff; width:520px; margin:auto; top:45px;}
+#map { width:400px; height:300px; margin:auto; }
+#topImage { position:relative; left:-20px; top:-10px;}
+
+/* General */
+.topImage{ position:relative; top:-10px; left:-20px;}
+h1{ font-size:22px;}
+.center{ text-align:center; margin:auto;}
+.left{ text-align:left;}
+.right{ text-align:right;}
+.openingTimesTitle{ color:#cc9900; font-weight:bold;}
+label{ width:150px; display:block;}
+img{ border-style: none;}
+.error{ color:#ff0000; font-weight:bold; }
+input.button{ border: 1px Solid #999; background: #ccc; color:#fff; font: bold 8pt Arial; padding:3px;}
+a:hover{ color:#cc9900;}
+img.break{ margin:auto; color:#ccc; margin-top:8px; margin-bottom:8px; display:block;}
+.title{ font-size:17px; font-weight:bold;}
+.courseTitle{ font-size:22px; font-weight:bold; text-decoration:underline;}
+.bold{ font-weight:bold;}
+p{ text-align:justify;}
+
+/* Navigation */
+#menu {width:210px; height:260px; background-image:url(../pics/menu_bg.png); background-repeat:no-repeat; background-position:center;}
+#menu ul{font-family: Arial, Helvetica, sans-serif;list-style-type:none; top:76px; left:-15px; position:relative;}
+#menu li{display: inline;/* for IE5 and IE6 */}
+#menu a{color: #666;text-decoration: none;font-size: 17px; border:0; font-weight:bold; display: block; width: 240px; height:65px;}
+#menu a:hover{color: #999; text-decoration:overline underline;} 
+
+/* Forms */
+#form-body-long fieldset{ border: 1px Solid #c8c8c8; background: #fff; width: 100%; padding:5x; margin:auto;}
+#form-body fieldset{ border: 1px Solid #c8c8c8; background: #fff; width: 300px; padding:5x; margin:auto;}
+#form-body, #form-body-long fieldset legend { font-weight:bold; margin-left:15px; }
+#form-body, #form-body-long fieldset ul{ margin: 0; padding: 0;}
+#form-body, #form-body-long fieldset ul li { list-style: none; margin: 5px; text-align: left;}
+#form-body, #form-body-long fieldset ul li label{ width: 100px; float: left;}
+#form-body, #form-body-long fieldset ul li label em { color: #ff1515; font: 10pt Arial;}
+#form-body, #form-body-long fieldset ul li input.text{ border: 1px Solid #c8c8c8; font: 8pt Arial; width: 150px;}
+#form-body, #form-body-long fieldset ul li input.button{ border: 1px Solid #999; background: #ccc; color:#fff; font: bold 8pt Arial; width:90px;}
+#form-body, #form-body-long input.error{border-color:Red;border-style:solid;border-width:1px;}
+
+/* Tables */
+table.admin { margin:auto; border-collapse:collapse; width: 100%;}
+table.admin td, th { border: 1px solid #ccc; width:105px;  padding:5px;}
+.alternate { background-color:#ff0000; }
+table.admin thead{ background:#ccc; font-weight:bold;}
+
+/* Jquery */
+div.error{ color:#ff0000; font-weight:bold;}
+input.error{ border:2px solid #ff0000;}
+textarea.error{ border:2px solid #ff0000;}
+.errorDisplay{ text-align:center; margin:auto; width:400px;}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentinos</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+	<div id="wrapper">
+	    <div id="topImage"></div>
+	    <noscript><%= image_tag("topImage2.png") %></noscript>
+	    <div id="main">
+	        <div id="mainL">
+	            <div id="menu">
+	                <ul id="navMenu">
+	                    <li><a href="/" id="current"><img src="#" class="hover" id="btnHome" alt="Valentinos Italian Restaurant Bingley - Home Page" title="Valentinos Italian Restaurant Bingley - Home Page" /></a></li>
+	                    <li><a href="/menus"><img src="#" class="hover" id="btnMenus" alt="Valentinos Italian Restaurant Bingley - Menus Page" title="Valentinos Italian Restaurant Bingley - Menus Page" /></a></li>
+	                    <li><a href="/contact"><img src="#" class="hover" id="btnContact" alt="Valentinos Italian Restaurant Bingley - Contacts Page" title="Valentinos Italian Restaurant Bingley - Contacts Page" /></a></li>
+	                </ul>
+	            </div>
+
+	        </div>
+
+	        <div id="mainR">
+	            <div id="mainRL">
+					<%= yield %>
+	            </div>
+
+	            <div id="mainRR">
+	                # Right Side Here #
+	            </div>
+	        </div>
+	    </div>    
+	</div>
+
+	<div id="sitemap">
+	    <a href="/sitemap">Sitemap</a>
+	</div>
+
+	<div id="footer">
+	    <div class="center">
+	        This website runs on the <%= image_tag("adamedia-small-a.png", :alt => "Adamedia Web Solutions", :title => "Adamedia Web Solutions") %> Adamedia Platform.  Click <a href="http://www.adamedia.co.uk/">here</a> for more details.
+	    </div>
+	</div>
+
+</body>
+</html>
