@@ -2,22 +2,52 @@
 <html>
 <head>
   <title>Valentinos</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="/javascripts/valentino.js"></script>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        // Set selected menu item
+	        var path = location.pathname.substring(1);
+	        setNav(path);
+
+	        // Menu image rollovers
+	        preload();
+	        rollovers(path);
+	    });
+	
+			// Top image effects
+	    var mygallery = new fadeSlideShow({
+	        wrapperid: "topImage",
+	        dimensions: [960, 250],
+	        imagearray: [
+	        ["/images/topImage2.png"],
+					["/images/pics/topImage3.png"],
+					["/images/topImage4.png"],
+					["/images/topImage5.png"]
+		],
+	        displaymode: { type: 'auto', pause: 5000, cycles: 0, wraparound: false },
+	        persist: false,
+	        fadeduration: 2500,
+	        descreveal: "ondemand",
+	        togglerid: ""
+	    })
+	</script>
+	
+	<%= yield :head %>
+	
 </head>
 <body>
-
 	<div id="wrapper">
 	    <div id="topImage"></div>
-	    <noscript><%= image_tag("topImage2.png") %></noscript>
+	    <noscript><%= image_tag("topImage2.png", :alt => "Valentinos Italian Restaurant, Bingley (near Leeds) West Yorkshire", :title => "Valentinos Italian Restaurant, Bingley (near Leeds) West Yorkshire") %></noscript>
 	    <div id="main">
 	        <div id="mainL">
 	            <div id="menu">
 	                <ul id="navMenu">
-	                    <li><a href="/" id="current"><img src="#" class="hover" id="btnHome" alt="Valentinos Italian Restaurant Bingley - Home Page" title="Valentinos Italian Restaurant Bingley - Home Page" /></a></li>
-	                    <li><a href="/menus"><img src="#" class="hover" id="btnMenus" alt="Valentinos Italian Restaurant Bingley - Menus Page" title="Valentinos Italian Restaurant Bingley - Menus Page" /></a></li>
-	                    <li><a href="/contact"><img src="#" class="hover" id="btnContact" alt="Valentinos Italian Restaurant Bingley - Contacts Page" title="Valentinos Italian Restaurant Bingley - Contacts Page" /></a></li>
+	                    <li><a href="/" id="current"><img src="/images/btnHomeOrig.png" class="hover" id="btnHome" alt="Valentinos Italian Restaurant Bingley - Home Page" title="Valentinos Italian Restaurant Bingley - Home Page" /></a></li>
+											<li><a href="/menus"><img src="/images/btnMenusOrig.png" class="hover" id="btnMenus" alt="Valentinos Italian Restaurant Bingley - Menus Page" title="Valentinos Italian Restaurant Bingley - Menus Page" /></a></li>
+	                    <li><a href="/contact"><img src="/images/btnContactOrig.png" class="hover" id="btnContact" alt="Valentinos Italian Restaurant Bingley - Contact Page" title="Valentinos Italian Restaurant Bingley - Contact Page" /></a></li>
 	                </ul>
 	            </div>
 
@@ -25,11 +55,11 @@
 
 	        <div id="mainR">
 	            <div id="mainRL">
-					<%= yield %>
+								<%= yield %>
 	            </div>
 
 	            <div id="mainRR">
-	                # Right Side Here #
+	                <%= yield :right_insert %>
 	            </div>
 	        </div>
 	    </div>    

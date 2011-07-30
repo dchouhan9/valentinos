@@ -1,8 +1,8 @@
 * { margin: 0; padding: 0; font-family:Calibri, Arial; color:#333; font-size:15px;}
-body{ background-image:url(../pics/bgStripe.png)}
+body{ background-image:url(../images/bgStripe.png)}
 
 /* Layout Divs */
-#wrapper{ position:relative; top:30px; margin:auto; width:920px; background-image:url(../pics/mainBG.png); border:5px solid #666;}
+#wrapper{ position:relative; top:30px; margin:auto; width:920px; background-image:url(../images/mainBG.png); border:5px solid #666;}
 #main{ width:100%; overflow:auto;}
 #mainL{ width:220px; position:relative; float:left; text-align:center; padding-left:10px;}
 #mainR{ width:671px; float:right;}
@@ -31,9 +31,10 @@ img.break{ margin:auto; color:#ccc; margin-top:8px; margin-bottom:8px; display:b
 .courseTitle{ font-size:22px; font-weight:bold; text-decoration:underline;}
 .bold{ font-weight:bold;}
 p{ text-align:justify;}
+p.justify{ text-align:justify; margin:8px;}
 
 /* Navigation */
-#menu {width:210px; height:260px; background-image:url(../pics/menu_bg.png); background-repeat:no-repeat; background-position:center;}
+#menu {width:210px; height:260px; background-image:url(../images/menu_bg.png); background-repeat:no-repeat; background-position:center;}
 #menu ul{font-family: Arial, Helvetica, sans-serif;list-style-type:none; top:76px; left:-15px; position:relative;}
 #menu li{display: inline;/* for IE5 and IE6 */}
 #menu a{color: #666;text-decoration: none;font-size: 17px; border:0; font-weight:bold; display: block; width: 240px; height:65px;}

@@ -1,2 +1,46 @@
-<h1>Home#contact</h1>
-<p>Find me in app/views/home/contact.html.erb</p>
+<img src="/images/contactUs.png" alt="Contact Valentinos Italian Restaurant, Bingley, West Yorkshire" title="Contact Valentinos Italian Restaurant, Bingley, West Yorkshire" />
+    <div class="center">
+        <img src="/images/realItaly.png" alt="A taste of real Italy at Valentinos Italian Restaurant, Bingley, Yorkshire" title="A taste of real Italy at Valentinos Italian Restaurant, Bingley, Yorkshire" />
+        <br /><br />
+        <div id="map"></div>
+        <br />
+        <a href="http://www.multimap.com/maps/?qs=bd16+2hz+&countryCode=GB" target="_blank">Find us on Multimap</a>
+        <br /><br />
+    </div>
+
+		<% content_for :head do %>
+		  <script type="text/javascript">
+			    $(document).ready(function () {
+			        getMap();
+			    });
+			</script>
+		<% end %>
+		
+		<% content_for :right_insert do %>
+			<div class="center">
+			    <img src="/images/contactDetailsTitle.png" alt="Valentinos Italian Restaurant, Bingley, West Yorkshire - Contact Details" title="Valentinos Italian Restaurant, Bingley, West Yorkshire - Contact Details" />
+			    <br /><br />
+
+			    <span class="openingTimesTitle">TELEPHONE</span>
+			    <br />
+			    01274 566516
+			    <br /><br />
+			    <span class="openingTimesTitle">EMAIL</span>
+			    <br />
+			    <a href="mailto:info@valentinos-bingley.co.uk">info@valentinos-bingley.co.uk</a>
+			    <br /><br />
+			    <span class="openingTimesTitle">ADDRESS</span>
+			    <br />
+			    59 main street,<br />
+			    bingley,<br />
+			    west yorkshire.<br />
+			    bd16 2hz
+			    <br /><br />
+			    <span class="openingTimesTitle">PARKING</span>
+			    <p class="justify">
+			    There is a free (after 6pm) car park almost next to the restaurant, on the Main Street.  There is also (limited) accessibility parking
+			    directly outside the restaurant.
+					</p>
+			    <br /><br />
+			</div>
+		<% end %>
