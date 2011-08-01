@@ -76,7 +76,7 @@ function rollovers(loc) {
                  this.src = this.src.replace("Orig", "Over");
              },
              function () {
-                 if ((loc == "" && this.id == "btnHome") || (loc == "Contact" && this.id == "btnContact") || (loc == "Our-Menus" && this.id == "btnMenus")) {
+                 if ((loc == "" && this.id == "btnHome") || (loc == "contact" && this.id == "btnContact") || (loc == "menus" && this.id == "btnMenus")) {
                      return;
                  }                 
                  else {
