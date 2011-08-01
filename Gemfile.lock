@@ -37,7 +37,7 @@ GEM
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
     cgi_multipart_eof_fix (2.5.0)
-    chronic (0.6.1)
+    chronic (0.6.2)
     daemons (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
