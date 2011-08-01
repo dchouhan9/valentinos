@@ -1,1 +1,3 @@
 Redirect permanent /Contact /contact
+Redirect permanent /Our-Menus /menus
+Redirect permanent /Sitemap /sitemap
