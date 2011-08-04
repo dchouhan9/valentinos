@@ -2,21 +2,21 @@
     <div class="center">
         <img src="/images/realItaly.png" alt="A taste of real Italy at Valentinos Italian Restaurant, Bingley, Yorkshire" title="A taste of real Italy at Valentinos Italian Restaurant, Bingley, Yorkshire" />
         <br /><br />
-        <div id="map"></div>
-        <br />
+        <div id="map">
+        	
+					<iframe width="400" height="330" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=bd16+2hz+&amp;aq=&amp;sll=53.800651,-4.064941&amp;sspn=23.878967,34.936523&amp;ie=UTF8&amp;hq=&amp;hnear=Bingley,+West+Yorkshire+BD16+2HZ,+United+Kingdom&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+
+        </div>
+        <br /><br />
         <a href="http://www.multimap.com/maps/?qs=bd16+2hz+&countryCode=GB" target="_blank">Find us on Multimap</a>
         <br /><br />
     </div>
-
+		
 		<% content_for :head do %>
-		  <script type="text/javascript">
-			    $(document).ready(function () {
-			        getMap();
-			    });
-			</script>
+
 		<% end %>
 		
-		<% content_for :right_insert do %>
+		<% content_for :right do %>
 			<div class="center">
 			    <img src="/images/contactDetailsTitle.png" alt="Valentinos Italian Restaurant, Bingley, West Yorkshire - Contact Details" title="Valentinos Italian Restaurant, Bingley, West Yorkshire - Contact Details" />
 			    <br /><br />

@@ -4,6 +4,11 @@ function isValidEmailAddress(emailAddress) {
     return pattern.test(emailAddress);
 }
 
+function alertTest(){
+	alert('test');
+}
+
+
 /* JQuery Add Action Modal Form */
 function modalForm(p_title, div, height, width) {
     p_title = p_title || "";

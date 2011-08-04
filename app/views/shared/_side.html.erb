@@ -1,0 +1,7 @@
+<div class="center">
+    <img src="/images/menuSelectionTitle.png" alt="Valentinos Italian Restaurant, Bingley, West Yorkshire - Menu Selection" title="Valentinos Italian Restaurant, Bingley, West Yorkshire - Menu Selection" />    
+    <br /><br />
+    <% @courses.each do |c| %>
+			<a href="/menu/<%= c.id %>"><%= c.title %></a><br />
+    <% end %>
+</div>

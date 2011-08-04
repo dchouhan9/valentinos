@@ -1,0 +1,34 @@
+<img src="/images/ourMenus.png" alt="Valentinos Italian Restaurant, Bingley - Our Menus" title="Valentinos Italian Restaurant, Bingley - Our Menus" />
+<br /><br />
+<div class="center">
+        <img src="/images/ItalianFare.png" alt="Traditional Italian Fare at Valentinos Italian Restaurant, Bingley" title="Traditional Italian Fare at Valentinos Italian Restaurant, Bingley" />
+        <br />
+        <span class="courseTitle"><%= @course.title %></span>
+    </div>
+    <br />
+    <div >
+    <table class="center">
+        <tbody>           
+   			<% @menu.each do |m| %>
+            <tr>
+                <td>
+                    <span class="title"><%= m.title %> - <%= m.price %><br /></span>
+                </td>
+            </tr>
+             <tr>
+                <td><%= m.description %></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="/images/imgBreak.png" alt="Valentinos Italian Restaurant Bingley - <%= m.title %>"  title="Valentinos Italian Restaurant Bingley - <%= m.title %>" class="break" />
+                </td>
+            </tr>
+				<% end %>
+        </tbody>
+    </table>
+    </div>
+<br /><br />
+
+<% content_for :right do %>
+	<%= render "shared/side" %>
+<% end %>

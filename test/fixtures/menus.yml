@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  course_id: 
+  title: 
+  description: 
+  price: 
+  enabled: false
+
+two:
+  course_id: 
+  title: 
+  description: 
+  price: 
+  enabled: false

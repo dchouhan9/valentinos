@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Valentinos</title>
-  <link href="/stylesheets/Site.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="/javascripts/jquery-1.4.1-vsdoc.js"></script>
+  <title>Valentinos</title>ß
   <script type="text/javascript" src="/javascripts/jquery-1.4.1.min.js"></script>
   <script type="text/javascript" src="/javascripts/JQueryUI/js/jquery-1.4.2.min.js"></script>
-  <script type="text/javascript" src="/javascripts/JQueryUI/js/jquery-ui-1.8.4.custom.min.js"></script>
-  <script type="text/javascript" src="/javascripts/Scripts/jquery-cookie.js"></script>
-  <script type="text/javascript" src="/javascripts/jquery.validate.js"></script>
   <script type="text/javascript" src="/javascripts/valentino.js"></script>
   <script type="text/javascript" src="/javascripts/fadeslideshow.js"></script>
-  <link href="/javascripts/Scripts/JQueryUI/css/custom-theme/jquery-ui-1.8.4.custom.css" rel="stylesheet" type="text/css" />
-
   <%= stylesheet_link_tag :all %>
 	<script type="text/javascript">
 	    $(document).ready(function () {
 	        // Set selected menu item
 	        var path = location.pathname.substring(1);
 	        setNav(path);
-
+			
 	        // Menu image rollovers
 	        preload();
 	        rollovers(path);
@@ -68,7 +61,7 @@
 	            </div>
 
 	            <div id="mainRR">
-	                <%= yield :right_insert %>
+	                <%= yield :right %>
 	            </div>
 	        </div>
 	    </div>    

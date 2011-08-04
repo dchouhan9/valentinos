@@ -1,7 +1,16 @@
 Valentinos::Application.routes.draw do
   
+  match 'menus', :controller => 'menu', :action => 'show', :id => '27'
+  
+  get "menu/index"
+
+  get "menu/show"
+
   root :to => "home#index"
   match ':action', :controller => "home"
+ 
+  
+  resources :menu
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
