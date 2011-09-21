@@ -6,7 +6,7 @@ appname = "valentinos"
 
 #### Stop editing here or the sky might fall on your head #######
 
-worker_processes 4
+worker_processes 2
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
