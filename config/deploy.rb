@@ -46,5 +46,5 @@ namespace :deploy do
      desc "#{t} task is a no-op with mod_rails"
      task t, :roles => :app do ; end
    end
-  
+
 end
