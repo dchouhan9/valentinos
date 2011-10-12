@@ -1,19 +1,17 @@
 require "bundler/capistrano"
 
-set :application, "valentino-bingley"
+set :application, "valentinos"
 set :domain, "77.73.5.134"
 set :user, "adam"
-set :port, 2327
 
 set :scm, :git
 set :repository,  "git@github.com:adamedia/valentinos.git"
 
 set :use_sudo, false
 set :branch, "master"
-set :deploy_via, :checkout
-set :git_shallow_clone, 1
-set :deploy_to, "/home/#{user}/www.valentino-bingley.co.uk/"
-
+set :deploy_via, :remote_cache
+set :deploy_to, "/home/#{user}/valentino-bingley.co.uk/"
+set :rails_env, "production"
 set :keep_releases, 1
 
 role :app, domain
@@ -24,18 +22,6 @@ default_run_options[:pty] = true
 
 namespace :deploy do
 
-  # Make capistrano restart mod_passenger so changes are taken into account
-  desc "Restarting mod_rails with restart.txt"
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "touch #{current_path}/tmp/restart.txt"
-  end
-
-  # Ignore cap deploy:start and cap:deploy stop
-  [:start, :stop].each do |t|
-    desc "#{t} task is a no-op with mod_rails"
-    task t, :roles => :app do ; end
-  end
-  
   # Make sure shared files are still shared when we deploy over the top of them
   # Create any directories we need on first deploy
   desc "Make sure assets persist, new directories are created."
@@ -50,5 +36,15 @@ namespace :deploy do
   
   desc "Automatically cleanup after deploy."
   after "deploy", "deploy:cleanup"
+  
+  desc "Restarting mod_rails with restart.txt"
+   task :restart, :roles => :app, :except => { :no_release => true } do
+     run "touch #{current_path}/tmp/restart.txt"
+   end
+
+   [:start, :stop].each do |t|
+     desc "#{t} task is a no-op with mod_rails"
+     task t, :roles => :app do ; end
+   end
   
 end
