@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.2.1'
 
-gem 'mysql2', '< 0.3.7'
+gem 'mysql2'#, '< 0.3.7'
 gem 'jquery-rails'
 gem 'rake', '0.8.7'
 
